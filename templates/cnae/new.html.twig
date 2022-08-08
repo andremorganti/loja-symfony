@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Cnae{% endblock %}
+
+{% block body %}
+    <h1>Create new Cnae</h1>
+
+    {{ include('cnae/_form.html.twig') }}
+
+    <a href="{{ path('app_cnae_index') }}">back to list</a>
+{% endblock %}

@@ -6,10 +6,17 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Inventory</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Customers</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Products</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link px-2 text-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownConfiguracao">
+              Configuração
+            </a>
+            <ul class="dropdown-menu text-small" aria-labelledby="dropdownConfiguracao">
+              <li><a href="{{ path('app_cnae_index') }}" class="dropdown-item">CNAE</a></li>
+              <li><a href="{{ path('app_segment_index') }}" class="dropdown-item">Segmento</a></li>
+              <li><a href="{{ path('app_corporate_type_index') }}" class="dropdown-item">Corporate Type</a></li>
+              <li><a href="{{ path('app_sector_index') }}" class="dropdown-item">Setor</a></li>
+            </ul>
+          </li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
