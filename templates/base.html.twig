@@ -14,9 +14,11 @@
         {% endblock %}
     </head>
     <body>
-
-        {{ include("shared/navbar-non-logged.html.twig") }}
-        {{ include("shared/navbar-logged.html.twig") }}
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {{ include("shared/navbar-logged.html.twig") }}
+        {% else %}
+            {{ include("shared/navbar-non-logged.html.twig") }}
+        {% endif %}
 
         {% block body %}
 
