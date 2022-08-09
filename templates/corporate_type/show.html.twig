@@ -22,9 +22,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_corporate_type_index') }}">back to list</a>
+    <a href="{{ path('app_corporate_type_index') }}" class="btn btn-secondary">Voltar</a>
 
-    <a href="{{ path('app_corporate_type_edit', {'id': corporate_type.id}) }}">edit</a>
+    <a href="{{ path('app_corporate_type_edit', {'id': corporate_type.id}) }}" class="btn btn-warning">Alterar</a>
 
     {{ include('corporate_type/_delete_form.html.twig') }}
 {% endblock %}

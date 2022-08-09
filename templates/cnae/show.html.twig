@@ -22,9 +22,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_cnae_index') }}">back to list</a>
+    <a href="{{ path('app_cnae_index') }}" class="btn btn-secondary">Voltar</a>
 
-    <a href="{{ path('app_cnae_edit', {'id': cnae.id}) }}">edit</a>
+    <a href="{{ path('app_cnae_edit', {'id': cnae.id}) }}" class="btn btn-warning">Alterar</a>
 
     {{ include('cnae/_delete_form.html.twig') }}
 {% endblock %}

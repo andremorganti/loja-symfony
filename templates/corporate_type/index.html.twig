@@ -21,8 +21,8 @@
                 <td>{{ corporate_type.name }}</td>
                 <td>{{ corporate_type.code }}</td>
                 <td>
-                    <a href="{{ path('app_corporate_type_show', {'id': corporate_type.id}) }}">show</a>
-                    <a href="{{ path('app_corporate_type_edit', {'id': corporate_type.id}) }}">edit</a>
+                    <a href="{{ path('app_corporate_type_show', {'id': corporate_type.id}) }}" class="btn btn-info">Mostrar</a>
+                    <a href="{{ path('app_corporate_type_edit', {'id': corporate_type.id}) }}" class="btn btn-warning">Alterar</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +33,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_corporate_type_new') }}">Create new</a>
+    <a href="{{ path('app_corporate_type_new') }}" class="btn btn-primary">Novo</a>
 {% endblock %}

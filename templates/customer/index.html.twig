@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Customer index{% endblock %}
+
+{% block body %}
+    <h1>Customer index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Legal_name</th>
+                <th>Cnpj</th>
+                <th>Start_date</th>
+                <th>Net_revenue</th>
+                <th>Ebtida</th>
+                <th>Employees</th>
+                <th>Info_year</th>
+                <th>Corporation_structure</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+            <tr>
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.legalName }}</td>
+                <td>{{ customer.cnpj }}</td>
+                <td>{{ customer.startDate ? customer.startDate|date('Y-m-d') : '' }}</td>
+                <td>{{ customer.netRevenue }}</td>
+                <td>{{ customer.ebtida }}</td>
+                <td>{{ customer.employees }}</td>
+                <td>{{ customer.infoYear }}</td>
+                <td>{{ customer.corporationStructure }}</td>
+                <td>
+                    <a href="{{ path('app_customer_show', {'id': customer.id}) }}" class="btn btn-info">Mostrar</a>
+                    <a href="{{ path('app_customer_edit', {'id': customer.id}) }}" class="btn btn-warning">Alterar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_customer_new') }}" class="btn btn-primary">Novo</a>
+{% endblock %}
